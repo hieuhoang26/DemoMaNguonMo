@@ -1,0 +1,18 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: demodata
+  devtools:
+    add-properties: true
+  datasource:
+    url: jdbc:mysql://${DB_HOST:localhost}:${DB_PORT:3306}/${DB_NAME:demodata}
+    username: ${DB_USER:root}
+    password: ${DB_PASSWORD:12345678}
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
